@@ -13,10 +13,10 @@ class Connection {
       
             const config = {
               connectionLimit: 100,
-              host: "localhost",
-              user: "root",
-              password: "Rub!xSk803",
-              database: "poke_dev"
+              host: host,
+              user: user,
+              password: password,
+              database: db
             }
       
             this.pool = mysql.createPool(config)

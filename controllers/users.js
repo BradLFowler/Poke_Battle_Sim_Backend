@@ -32,7 +32,7 @@ const changeUName = (req, res) => {
 
     pool.query(sql, (err, results) => {
         if(err) return handleSQLError(results, err)
-        return res.send(`Changed Username to:${username}`)
+        return res.send(`Changed Username to:${req.params.username}`)
     })
 }
 
