@@ -2,11 +2,11 @@ const express = require('express')
 const authRouter = require('./routes/auth')
 const usersRouter = require('./routes/users')
 const { logger } = require('./middleware/middleware')
-// need dotenv.config()
+require('dotenv').config()
 
 const app = express();
 app.use(express.json())
-const port = 3001;
+const port = process.env.PORT;
 
 app.get('/', logger, (req, res) => {
     res.send('Welcome')
