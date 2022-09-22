@@ -10,14 +10,12 @@ app.use(express.json())
 const port = process.env.PORT;
 
 const corsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: '*', 
     credentials: true,//access-control-allow-credentials:true
     optionSuccessStatus: 200
 }
 
 app.use(cors(corsOptions));
-
-app.use(cors)
 
 app.get('/', logger, (req, res) => {
     res.send('Welcome')
